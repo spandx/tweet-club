@@ -5,15 +5,48 @@ Problem:
 
 Twitter API?
 
-We want to interact with the twitter API and 
+We want to interact with the twitter API:
 
-* how do we do that?
+* [X] how do we do that?
 * look at the twitter gem?
-  * how do we find it?
-  * how do we set it up?
-  * how do we start playing around with it?
+  * [X] how do we find it?
+  * [X] how do we set it up?
+  * [X] how do we start playing around with it?
 * Collect user info and how would we model that day?
 
 
 CLI:
 * class that we can call from a ruby script.
+
+```yaml
+~/.tweetclubrc.erb
+profiles:
+  default: "personal"
+  personal:
+    consumer_key: <%= ENV["TMP_CONSUMER_KEY"] %>
+    consumer_secret:     = "YOUR_CONSUMER_SECRET"
+    access_token        = "YOUR_ACCESS_TOKEN"
+    access_token_secret = "YOUR_ACCESS_SECRET"
+  work:
+    consumer_key: "YOUR_CONSUMER_KEY"
+    consumer_secret: "YOUR_CONSUMER_SECRET"
+    access_token: "YOUR_ACCESS_TOKEN"
+    access_token_secret: "YOUR_ACCESS_SECRET"
+```
+
+```bash
+$ tweet-club --profile personal
+$ tweet-club
+```
+
+
+```bash
+------------------------------
+| @tenderlove ....            |
+|                             |
+|                             |
+|                             |
+------------------------------
+| $ /stream "#rubyconf"       |
+------------------------------
+```
